@@ -11,7 +11,7 @@ const Home = () => {
     useEffect(() =>{
 
         const fetchOpportunities = async () => {
-            const response = await fetch('https://bruin-opportunities.onrender.com/api/opportunities')
+            const response = await fetch('https://bruin-opportunities.onrender.com/opportunities')
             const json = await response.json()
 
             if (response.ok) {

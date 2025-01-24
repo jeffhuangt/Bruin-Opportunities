@@ -6,7 +6,7 @@ const OpportunityDetails = ({opportunity}) => {
     const { dispatch } = useOpportunitiesContext()
 
     const handleClick = async () => {
-        const response = await fetch('https://bruin-opportunities.onrender.com/api/opportunities/' + opportunity._id, {
+        const response = await fetch('https://bruin-opportunities.onrender.com/opportunities/' + opportunity._id, {
             method: 'DELETE'
         })
         const json = await response.json()
