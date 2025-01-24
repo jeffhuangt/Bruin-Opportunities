@@ -10,6 +10,8 @@ const app = express()
 app.use(
     cors({
       origin: ['http://localhost:5173', 'https://gleeful-buttercream-5cd100.netlify.app'], // Allowed origins
+      methods: ['GET', 'POST', 'PUT', 'DELETE'], // Allowed methods
+      credentials: true,
     })
   )
 
