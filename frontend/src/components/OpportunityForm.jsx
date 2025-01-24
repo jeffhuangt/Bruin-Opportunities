@@ -21,7 +21,7 @@ const OpportunityForm = () => {
         ? 'https://bruin-opportunities.onrender.com'
         : 'http://localhost:4000';
 
-        const response = await fetch('${API_BASE_URL}/api/opportunities', {
+        const response = await fetch('${API_BASE_URL}/api/opportunities/', {
             method: 'POST',
             body: JSON.stringify(opportunity),
             headers: {

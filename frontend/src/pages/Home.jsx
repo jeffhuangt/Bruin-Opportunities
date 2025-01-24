@@ -17,7 +17,7 @@ const Home = () => {
     //     ? 'https://bruin-opportunities.onrender.com'
     //     : 'http://localhost:4000'
 
-            const response = await fetch('https://bruin-opportunities.onrender.com/api/opportunities')
+            const response = await fetch('https://bruin-opportunities.onrender.com/api/opportunities/')
             const json = await response.json()
 
             if (response.ok) {
