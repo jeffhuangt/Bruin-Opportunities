@@ -1,0 +1,128 @@
+/* Home container for opportunities and form */
+.home {
+  display: flex; /* Use flexbox for layout */
+  align-items: flex-start; /* Align items to the top */
+  gap: 20px; /* Space between the columns */
+  padding: 20px; /* Add padding around the container */
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+/* Opportunities Section */
+.opportunities {
+  flex: 3; /* Take up 3/5 of the space */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* Space between cards */
+}
+
+/* Opportunity Card */
+.opportunity-details {
+  background: #ffffff; /* White background for cards */
+  border: 1px solid #e0e0e0; /* Subtle border for separation */
+  border-radius: 10px; /* Slightly rounded corners */
+  padding: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+  width: 100%; /* Take full width of container */
+  transition: transform 0.2s, box-shadow 0.2s; /* Add hover animation */
+}
+
+.opportunity-details:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); /* Enhance shadow on hover */
+}
+
+.opportunity-details h4 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.opportunity-details p {
+  font-size: 1rem;
+  color: #555;
+  margin: 5px 0;
+}
+
+.opportunity-details strong {
+  color: #333;
+}
+
+/* Form Section */
+form {
+  flex: 2; /* Take up 2/5 of the space */
+  background: #ffffff; /* White background for the form */
+  border: 1px solid #e0e0e0; /* Subtle border for separation */
+  border-radius: 10px; /* Rounded corners for a clean look */
+  padding: 20px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Softer shadow for depth */
+}
+
+form h3 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #f8f8f8; /* Light gray background */
+}
+
+form input:focus {
+  border-color: #4caf50; /* Green border on focus */
+  outline: none;
+  background-color: #ffffff; /* White background on focus */
+}
+
+form button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50; /* Green background */
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.2s;
+}
+
+form button:hover {
+  background-color: #45a049; /* Slightly darker green on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .home {
+    flex-direction: column; /* Stack sections on smaller screens */
+  }
+}
+
+.opportunity-details {
+  position: relative; /* Enable positioning of child elements */
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Take full width of container */
+}
+
+.opportunity-details span {
+  position: absolute; /* Position relative to the card */
+  top: 10px; /* Adjust to align in the upper-right corner */
+  right: 10px;
+  color: black; /* Make the text black */
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: transform 0.2s, color 0.2s;
+}

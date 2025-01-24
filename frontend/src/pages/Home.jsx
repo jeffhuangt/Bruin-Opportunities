@@ -1,0 +1,37 @@
+import { useEffect } from 'react'
+import { useOpportunitiesContext } from '../hooks/useOpportunitiesContext.jsx'
+
+import OpportunityDetails from '../components/OpportunityDetails.jsx'
+import OpportunityForm from '../components/OpportunityForm.jsx'
+
+
+const Home = () => {
+    const {opportunities, dispatch} = useOpportunitiesContext()
+
+    useEffect(() =>{
+
+        const fetchOpportunities = async () => {
+            const response = await fetch('api/opportunities')
+            const json = await response.json()
+
+            if (response.ok) {
+                dispatch({type: 'SET_OPPORTUNITIES', payload: json})
+            }
+        }
+
+        fetchOpportunities()
+    }, [dispatch])
+
+    return (
+        <div className="home">
+            <div className="opportunities">
+                {opportunities && opportunities.map((opportunity) => (
+                    <OpportunityDetails key = {opportunity._id} opportunity = {opportunity} />
+                ))}
+            </div>
+            <OpportunityForm />
+        </div>
+    )
+}
+
+export default Home
