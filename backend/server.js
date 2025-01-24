@@ -2,10 +2,16 @@ require('dotenv').config()
 
 const express = require('express')
 const mongoose = require('mongoose')
+const cors = require('cors')
 const opportRoutes = require('./routes/opportunities.js')
 
 const app = express()
 
+app.use(
+    cors({
+      origin: ['http://localhost:5173', 'https://gleeful-buttercream-5cd100.netlify.app'], // Allowed origins
+    })
+  )
 
 app.use(express.json())
 
