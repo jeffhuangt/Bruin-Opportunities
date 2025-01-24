@@ -1,4 +1,4 @@
-const Opportunity = require('../models/OpportunityModel')
+const Opportunity = require('../models/opportunityModel')
 const mongoose = require('mongoose')
 
 
