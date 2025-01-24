@@ -16,7 +16,7 @@ const OpportunityForm = () => {
 
         const opportunity = {title, field, pay}
 
-        const response = await fetch('https://bruin-opportunities.onrender.com/opportunities', {
+        const response = await fetch('https://bruin-opportunities.onrender.com', {
             method: 'POST',
             body: JSON.stringify(opportunity),
             headers: {
