@@ -6,8 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     proxy: {
-      // '/api': 'http://localhost:4000', // Proxy API requests to the backend
-      '/api': 'https://bruin-opportunities.onrender.com', // Proxy API requests to the backend
+      '/api': 'http://localhost:4000', // Proxy API requests to the backend
     },
   },
 });
