@@ -7,11 +7,6 @@ const OpportunityDetails = ({opportunity}) => {
 
     const handleClick = async () => {
 
-        const API_BASE_URL =
-        process.env.NODE_ENV === 'production'
-        ? 'https://bruin-opportunities.onrender.com'
-        : 'http://localhost:4000';
-
         const response = await fetch('https://bruin-opportunities.onrender.com/api/opportunities/' + opportunity._id, {
             method: 'DELETE'
         })

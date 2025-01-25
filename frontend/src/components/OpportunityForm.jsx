@@ -16,10 +16,6 @@ const OpportunityForm = () => {
 
         const opportunity = {title, field, pay}
 
-        const API_BASE_URL =
-        process.env.NODE_ENV === 'production'
-        ? 'https://bruin-opportunities.onrender.com'
-        : 'http://localhost:4000';
 
         const response = await fetch('https://bruin-opportunities.onrender.com/api/opportunities/', {
             method: 'POST',
