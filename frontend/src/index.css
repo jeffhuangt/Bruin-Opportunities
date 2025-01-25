@@ -60,11 +60,11 @@
 }
 
 form {
-  flex: 2; 
+  flex: 1.8; 
   background: #ffffff; 
   border: 1px solid #e0e0e0; 
   border-radius: 10px; 
-  padding: 20px;
+  padding: 35px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
