@@ -23,7 +23,7 @@ const OpportunityDetails = ({opportunity}) => {
             <p><strong>Field: </strong>{opportunity.field}</p>
             <p><strong>Pay: </strong>{opportunity.pay}</p>
             <p>{formatDistanceToNow(new Date(opportunity.createdAt), { addSuffix: true})}</p>
-            <span onClick={handleClick}>delete</span>
+            <span onClick={handleClick}>Delete</span>
         </div>
     )
 }
